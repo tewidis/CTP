@@ -38,7 +38,7 @@
         - matchToken(token)
         - Matching: Consumes token 
         - Non-matching: Error
-    * How do we seelct the correct rule?
+    * How do we select the correct rule?
         - peekToken
     * Output is an abstract syntax tree
 2. Familiar example:
@@ -57,7 +57,7 @@
     * expr and term have left recursion
         - How do we handle this?
 2. Extended Backus Naur Form (EBNF)
-    * Uses {} notation ot indicate 0 or more
+    * Uses {} notation to indicate 0 or more
         - Concept is similar to '\*' operator of regexp
         - Num ::= [0-9][0-9]*
     * expr ::= term addop term
@@ -210,7 +210,7 @@ void factor()
 
 ## More of Left Recursion
 
-1. Remove left conversion by converting from BNF to EBNF
+1. Remove left recursion by converting from BNF to EBNF
 2. If a grammar is left recursive we must first rewrite it to make it right
 recursive
     * Simple immediate left recursion
@@ -236,6 +236,7 @@ recursive
     * E -> E + T | T
     * T -> T * F | F
     * F -> (E) | id
+2. Solution: Yes
 
 ## Left Recursion Quiz 2
 

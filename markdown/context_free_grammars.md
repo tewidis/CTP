@@ -109,10 +109,10 @@ tree (or equivalently: if it has more than one leftmost derivation (or rightmost
 
 ## Resolution of Ambiguities: Introduction
 
-1. Some ambiguities are inessential but some others must be resolve
+1. Some ambiguities are inessential but some others must be resolved
     * The following grammar is ambiguous:
         - exp -> exp op exp | (exp) | number op -> +|-|\*
-        - Sampel ambiguous strings: 1+2*3 and 1-2-3
+        - Sample ambiguous strings: 1+2*3 and 1-2-3
     * Resolution of ambiguity:
         - Precedence: * has higher precedence than + and -
         - Left-association: Performs ops from left to right
@@ -129,7 +129,7 @@ lower precedence closer to the root
 
 1. Assume the parser can make the right decision when first choosing addop
     * Because the term operator is below addop, we can't turn a term into
-    and addop, so the example on the right doesn't work
+    an addop, so the example on the right doesn't work
     * Only one legal parse tree shown on left
     * Parse tree on right not possible. \<term\> can not derive \<exp\> and therefore \<addop\>
     * Will study how the parser makes decisions in the future

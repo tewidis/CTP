@@ -28,7 +28,7 @@ our syntactic checking needs for the compiler
     * If, eventually, both stack and input string are empty then it is a
     successful parse
 
-## Sample Example
+## Simple Example
 
 1. The Grammar
     * S -> (s) S | ''
@@ -181,7 +181,7 @@ while there are changes to any First(X) do
     * If A is start symbol, then $ is in Follow(A)
     * If there is a production rule B -> a A B', then Follow(A) contains
     First(B') - {e}
-    * If there is a production fule B -> a A B' and B' is nullable, then
+    * If there is a production rule B -> a A B' and B' is nullable, then
     Follow(A) contains Follow(B)
     * Notes:
         - $ is needed to indicate end of string
@@ -283,7 +283,7 @@ A -> a
     * Predict(A -> a) = First(a) if First(a) does not contain epsilon
     * Predict(A -> a) = First(a) - {e} U Follow(A) otherwise
 5. How to generate parsing table from predict sets?
-    * If a token t appears in Predict(A -> a), put rule A -> a in entry M[A} [t]
+    * If a token t appears in Predict(A -> a), put rule A -> a in entry M[A] [t]
 
 | ![parse1](images/lesson6_final_parse_table1.png) |
 |:--:|
